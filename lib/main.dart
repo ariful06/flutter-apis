@@ -98,7 +98,7 @@ class FlutterApiApp extends StatelessWidget {
           fallbackLocale: GetTranslations.fallbackLocal,
           theme: Style.lightTheme,
           darkTheme: Style.darkTheme,
-          themeMode: ThemeMode.dark,
+          themeMode: ThemeMode.light,
           defaultTransition: Transition.fadeIn,
           getPages: AppPages.routes,
           initialRoute: AppRoutes.START,

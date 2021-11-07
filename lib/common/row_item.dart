@@ -16,7 +16,7 @@ class CustomItem extends StatelessWidget {
           fontFamily: 'Agne',
           fontSize: 16,
         ),
-        child: Text(title ?? "",)
+        child: Text(title ?? "",style: TextStyle(color: Colors.deepOrange),)
       ),
     );
   }

@@ -30,13 +30,24 @@ class FlutterApiListScreen extends GetView {
             ),
             ListTile(
               leading: FlutterLogo(),
+              title: CustomItem(title: "bottom Navigatoin curved"),
+              onTap: () => {
+                Get.toNamed(AppRoutes.CURVED_BOTTOM_NAVIGATION,arguments: [{"title" : 'Curved bottom navigation'}])
+              },
+            ),
+            ListTile(
+              leading: FlutterLogo(),
               title: CustomItem(title: "badges"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed( AppRoutes.BADGES,arguments: [{"title" : 'Badges'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "better_player"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed( AppRoutes.BETTER_PLAYER,arguments: [{"title" : 'Better player'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
