@@ -11,6 +11,8 @@ import 'package:flutter_api_learning/home/better_player/better_player_page.dart'
 import 'package:flutter_api_learning/home/bottom_navigation/floating_action_button_bottom_navigation_bar.dart';
 import 'package:flutter_api_learning/home/chart/chart_page.dart';
 import 'package:flutter_api_learning/home/home_screen.dart';
+import 'package:flutter_api_learning/home/smootstart/smooth_star_example.dart';
+import 'package:flutter_api_learning/home/timesago/times_ago_example.dart';
 import 'package:flutter_api_learning/home/toast/toast_example.dart';
 import 'package:flutter_api_learning/routes/app_routes.dart';
 import 'package:get/get.dart';
@@ -24,5 +26,7 @@ class AppPages{
     GetPage<BetterPlayerExample>(name: AppRoutes.BETTER_PLAYER, page: ()=> BetterPlayerExample(),transition: Transition.fadeIn,binding: BetterPlayerBindings()),
     GetPage<BotToastExample>(name: AppRoutes.BOT_TOAST, page: ()=> BotToastExample(),transition: Transition.fadeIn),
     GetPage<ChartPage>(name: AppRoutes.FL_CHART, page: ()=> ChartPage(),transition: Transition.fadeIn,binding: ChartBindings()),
+    GetPage<TimesAgoExample>(name: AppRoutes.TIME_AGO, page: ()=> TimesAgoExample(),transition: Transition.fadeIn,),
+    GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,)
   ];
 }

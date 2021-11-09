@@ -71,7 +71,9 @@ class FlutterApiListScreen extends GetView {
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "timeago"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed(AppRoutes.TIME_AGO,arguments: [{'title':'Times ago '}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),

@@ -7,4 +7,6 @@ class AppRoutes{
   static const String BETTER_PLAYER = '/b_player';
   static const String BOT_TOAST = '/bot_toast';
   static const String FL_CHART = '/fl_chart';
+  static const String TIME_AGO = '/time_ago';
+  static const String SMOOTH_STAR = '/smooth_star';
 }
