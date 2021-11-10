@@ -18,7 +18,7 @@ class AnimationDoSample extends GetView<AnimationDoController> {
         backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
         body: Column(
           children: [
-            Wrap(
+            Row(
                 children :[
                 ElasticIn(child: Square()),
                 ElasticInDown(child: Square()),

@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_api_learning/routes/app_routes.dart';
@@ -91,6 +92,7 @@ class FlutterApiApp extends StatelessWidget {
       builder: (){
         return GetMaterialApp(
           key: flutterApiKey,
+          builder: BotToastInit(),
           debugShowCheckedModeBanner: false,
           title: "Flutter Api Example",
           translations: GetTranslations(),
@@ -98,7 +100,7 @@ class FlutterApiApp extends StatelessWidget {
           fallbackLocale: GetTranslations.fallbackLocal,
           theme: Style.lightTheme,
           darkTheme: Style.darkTheme,
-          themeMode: ThemeMode.dark,
+          themeMode: ThemeMode.light,
           defaultTransition: Transition.fadeIn,
           getPages: AppPages.routes,
           initialRoute: AppRoutes.START,
@@ -107,7 +109,8 @@ class FlutterApiApp extends StatelessWidget {
             debugPrint("LearningLog: $text");
           },
           navigatorObservers: <NavigatorObserver>[
-            GetObserver()
+            GetObserver(),
+            BotToastNavigatorObserver()
           ],
 
         );

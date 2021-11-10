@@ -30,18 +30,31 @@ class FlutterApiListScreen extends GetView {
             ),
             ListTile(
               leading: FlutterLogo(),
+              title: CustomItem(title: "bottom Navigatoin curved"),
+              onTap: () => {
+                Get.toNamed(AppRoutes.CURVED_BOTTOM_NAVIGATION,arguments: [{"title" : 'Curved bottom navigation'}])
+              },
+            ),
+            ListTile(
+              leading: FlutterLogo(),
               title: CustomItem(title: "badges"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed( AppRoutes.BADGES,arguments: [{"title" : 'Badges'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "better_player"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed( AppRoutes.BETTER_PLAYER,arguments: [{"title" : 'Better player'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "bot_toast"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed(AppRoutes.BOT_TOAST,arguments: [{'title':'Bot Toast'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
@@ -51,12 +64,16 @@ class FlutterApiListScreen extends GetView {
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "fl_chart"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed(AppRoutes.FL_CHART,arguments: [{'title':'Chart'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "timeago"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed(AppRoutes.TIME_AGO,arguments: [{'title':'Times ago '}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),
