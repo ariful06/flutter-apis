@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_api_learning/controller/smooth_start_controller.dart';
 import 'package:get/get.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import 'package:timeago/timeago.dart' as timeago;
-class SmoothStarExample extends GetView{
+class SmoothStarExample extends GetView<SmoothStartController>{
   @override
   Widget build(BuildContext context) {
 
-    var rating = 3.0;
     return Scaffold(
       appBar: AppBar(
         title: Text("Smooth Star"),
@@ -17,13 +17,13 @@ class SmoothStarExample extends GetView{
         child:  SmoothStarRating(
             allowHalfRating: false,
             onRated: (v) {
+              controller.rating = v;
             },
             starCount: 5,
-            rating: rating,
+            rating: controller.rating,
             size: 40.0,
-            isReadOnly:true,
-            filledIconData: Icons.star_border,
-            halfFilledIconData: Icons.star_half,
+            isReadOnly:false,
+            filledIconData: Icons.star,
             color: Colors.green,
             borderColor: Colors.green,
             spacing:0.0
