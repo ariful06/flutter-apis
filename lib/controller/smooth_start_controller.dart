@@ -4,9 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
-class BadgesController extends SuperController<dynamic> {
-  BadgesController();
-
+class SmoothStartController extends SuperController<dynamic> {
+  SmoothStartController();
+  double rating = 3.0;
   dynamic argumentData = Get.arguments;
   @override
   void onInit() {

@@ -78,7 +78,9 @@ class FlutterApiListScreen extends GetView {
             ListTile(
               leading: FlutterLogo(),
               title: CustomItem(title: "smooth_star_rating"),
-              onTap: () => {},
+              onTap: () => {
+                Get.toNamed(AppRoutes.SMOOTH_STAR,arguments: [{'title':'Smooth  start'}])
+              },
             ),
             ListTile(
               leading: FlutterLogo(),

@@ -4,6 +4,7 @@ import 'package:flutter_api_learning/bindings/badges_bindings.dart';
 import 'package:flutter_api_learning/bindings/better_player_bindings.dart';
 import 'package:flutter_api_learning/bindings/chart_bindings.dart';
 import 'package:flutter_api_learning/bindings/curved_bottom_navigation_bindings.dart';
+import 'package:flutter_api_learning/bindings/smooth_star_bindings.dart';
 import 'package:flutter_api_learning/controller/aimation/animation_do_controller.dart';
 import 'package:flutter_api_learning/home/animation/animation_do.dart';
 import 'package:flutter_api_learning/home/badges/badges_page.dart';
@@ -27,6 +28,6 @@ class AppPages{
     GetPage<BotToastExample>(name: AppRoutes.BOT_TOAST, page: ()=> BotToastExample(),transition: Transition.fadeIn),
     GetPage<ChartPage>(name: AppRoutes.FL_CHART, page: ()=> ChartPage(),transition: Transition.fadeIn,binding: ChartBindings()),
     GetPage<TimesAgoExample>(name: AppRoutes.TIME_AGO, page: ()=> TimesAgoExample(),transition: Transition.fadeIn,),
-    GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,)
+    GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,binding: SmoothStarBindings())
   ];
 }
