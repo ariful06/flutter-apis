@@ -18,6 +18,13 @@ class FlutterApiListScreen extends GetView {
           children: <Widget>[
             ListTile(
               leading: FlutterLogo(),
+              title: CustomItem(title: "Chat Ui"),
+              onTap: () => {Get.toNamed(AppRoutes.FLAYER_CHAT,arguments: [
+                {"title" : 'Chat UI'}
+              ])},
+            ),
+            ListTile(
+              leading: FlutterLogo(),
               title: CustomItem(title: "animation_do"),
               onTap: () => {Get.toNamed(AppRoutes.ANIMATION_DO,arguments: [
                {"title" : 'Animated Do Example'}
