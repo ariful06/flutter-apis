@@ -13,6 +13,8 @@ import 'package:flutter_api_learning/home/better_player/better_player_page.dart'
 import 'package:flutter_api_learning/home/bottom_navigation/floating_action_button_bottom_navigation_bar.dart';
 import 'package:flutter_api_learning/home/chart/chart_page.dart';
 import 'package:flutter_api_learning/home/chat/chat_page.dart';
+import 'package:flutter_api_learning/home/chat/login/bindings/login_bindings.dart';
+import 'package:flutter_api_learning/home/chat/login/login_page.dart';
 import 'package:flutter_api_learning/home/home_screen.dart';
 import 'package:flutter_api_learning/home/smootstart/smooth_star_example.dart';
 import 'package:flutter_api_learning/home/timesago/times_ago_example.dart';
@@ -23,7 +25,7 @@ import 'package:get/get.dart';
 class AppPages{
   static final List<GetPage<dynamic>> routes = <GetPage<dynamic>>[
     GetPage<FlutterApiListScreen>(name: AppRoutes.START, page: ()=> const FlutterApiListScreen()),
-    GetPage<ChatPage>(name: AppRoutes.FLAYER_CHAT, page: ()=> ChatPage(),transition: Transition.fadeIn,binding: ChatBindings()),
+    GetPage<LoginPage>(name: AppRoutes.FLAYER_CHAT, page: ()=> LoginPage(),transition: Transition.fadeIn,binding: LoginBindings()),
     GetPage<AnimationDoSample>(name: AppRoutes.ANIMATION_DO, page: ()=> AnimationDoSample(),transition: Transition.fadeIn,binding: AnimationBindings()),
     GetPage<CurvedBottomNavigationBarPage>(name: AppRoutes.CURVED_BOTTOM_NAVIGATION, page: ()=> CurvedBottomNavigationBarPage(),transition: Transition.fadeIn,binding: CurvedBottomNavigationBarBindings()),
     GetPage<BadgesExample>(name: AppRoutes.BADGES, page: ()=> BadgesExample(),transition: Transition.fadeIn,binding: BadgesBindings()),

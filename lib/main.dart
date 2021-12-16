@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_api_learning/routes/app_routes.dart';
 import 'package:flutter_api_learning/routes/app_pages.dart';
@@ -13,20 +14,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get_storage/get_storage.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const FlutterApiListPage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
 class FlutterApiListPage extends StatefulWidget {
   final String? title;
   const FlutterApiListPage({Key? key, this.title}) : super(key: key);
@@ -68,6 +55,7 @@ class Square extends StatelessWidget {
 
 Future<void> initServices() async {
   debugPrint('Starting GetX Services...');
+  await Firebase.initializeApp();
   await GetStorage.init();
   await Get.putAsync(() => GlobalVariablesService().init());
   debugPrint('All GetX Services Started...');
