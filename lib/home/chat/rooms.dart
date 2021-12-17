@@ -103,13 +103,13 @@ class _RoomsPageState extends State<RoomsPage> {
             onPressed: _user == null
                 ? null
                 : () {
-              FirebaseChatCore.instance.createRoom(type.User,);
-                    // Navigator.of(context).push(
-                    //   MaterialPageRoute(
-                    //     fullscreenDialog: true,
-                    //     builder: (context) => const UsersPage(),
-                    //   ),
-                    // );
+
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        fullscreenDialog: true,
+                        builder: (context) => const UsersPage(),
+                      ),
+                    );
                   },
           ),
         ],

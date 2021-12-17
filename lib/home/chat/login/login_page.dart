@@ -84,7 +84,7 @@ class LoginPage extends GetView<AuthController> {
                     : () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const RegisterPage(),
+                      builder: (context) => RegisterPage(),
                     ),
                   );
                 },
