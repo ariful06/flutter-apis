@@ -33,6 +33,7 @@ class AppPages{
     GetPage<BotToastExample>(name: AppRoutes.BOT_TOAST, page: ()=> BotToastExample(),transition: Transition.fadeIn),
     GetPage<ChartPage>(name: AppRoutes.FL_CHART, page: ()=> ChartPage(),transition: Transition.fadeIn,binding: ChartBindings()),
     GetPage<TimesAgoExample>(name: AppRoutes.TIME_AGO, page: ()=> TimesAgoExample(),transition: Transition.fadeIn,),
-    GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,binding: SmoothStarBindings())
+    GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,binding: SmoothStarBindings()),
+    GetPage<ChatPage>(name: AppRoutes.CHAT_PAGE, page: ()=> ChatPage(),transition: Transition.fadeIn,binding: ChatBindings())
   ];
 }

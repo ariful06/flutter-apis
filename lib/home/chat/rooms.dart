@@ -2,9 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_api_learning/routes/app_routes.dart';
 import 'package:flutter_api_learning/utils/colors.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_firebase_chat_core/flutter_firebase_chat_core.dart';
+import 'package:get/get.dart';
 import 'chat_page.dart';
 import 'constatns/firebase_constants.dart';
 import 'login/login_page.dart';
@@ -164,14 +166,19 @@ class _RoomsPageState extends State<RoomsPage> {
                     final room = snapshot.data![index];
 
                     return GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => ChatPage(
-                              room: room,
-                            ),
-                          ),
+                      onTap: () async {
+                        await Get.toNamed(
+                          AppRoutes.CHAT_PAGE,
+                          arguments: [
+                          {"room" : room}]
                         );
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(
+                        //     builder: (context) => ChatPage(
+                        //       room: room,
+                        //     ),
+                        //   ),
+                        // );
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(

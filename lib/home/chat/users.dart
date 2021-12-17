@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_api_learning/routes/app_routes.dart';
 import 'package:flutter_api_learning/utils/colors.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_firebase_chat_core/flutter_firebase_chat_core.dart';
+import 'package:get/get.dart';
 import 'chat_page.dart';
 
 class UsersPage extends StatelessWidget {
@@ -11,14 +13,20 @@ class UsersPage extends StatelessWidget {
   void _handlePressed(types.User otherUser, BuildContext context) async {
     final room = await FirebaseChatCore.instance.createRoom(otherUser);
 
-    Navigator.of(context).pop();
-    await Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => ChatPage(
-          room: room,
-        ),
-      ),
+    // Navigator.of(context).pop();
+
+    await Get.toNamed(
+      AppRoutes.CHAT_PAGE,
+        arguments: [
+          {"room" : room}]
     );
+    // await Navigator.of(context).push(
+    //   MaterialPageRoute(
+    //     builder: (context) => ChatPage(
+    //       room: room,
+    //     ),
+    //   ),
+    // );
   }
 
   Widget _buildAvatar(types.User user) {

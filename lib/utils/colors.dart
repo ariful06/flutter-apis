@@ -16,7 +16,10 @@ const Color darkDividerColor = Color(0xFF545454);
 // Black theme
 const Color blackPrimaryColor = Color(0xFF000000);
 const Color blackAccentColor = Color(0xFFFFFFFF);
-
+const Color kButtonColor = Color(0xffF89500);
+const Color kChatIconBg = Color(0x50F89500);
+const Color kChatPageBg = Color(0xFFE5E5E5);
+const Color kLightGreyBg = Color(0xffF5F5F5);
 const colors = [
   Color(0xffff6767),
   Color(0xff66e0da),
