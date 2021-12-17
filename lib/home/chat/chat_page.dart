@@ -289,7 +289,9 @@ class ChatPage extends GetView<ChatController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 InkWell(
-                                  onTap: () {},
+                                  onTap: () {
+                                    _handleFileSelection();
+                                  },
                                   child: Container(
                                     height: 33.h,
                                     width: 33.w,

@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_api_learning/home/chat/constatns/firebase_constants.dart';
+import 'package:flutter_firebase_chat_core/flutter_firebase_chat_core.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import '../../home_screen.dart';
-import '../firebase_chat_core.dart';
 import '../rooms.dart';
 
 class AuthController extends SuperController {
