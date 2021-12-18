@@ -11,5 +11,6 @@ class AppRoutes{
   static const String TIME_AGO = '/time_ago';
   static const String SMOOTH_STAR = '/smooth_star';
   static const String CHAT_PAGE = '/chat';
+  static const String GOOGLE_MAP = '/google_map_page';
 
 }

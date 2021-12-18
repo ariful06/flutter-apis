@@ -84,10 +84,12 @@ dependencies:
   uuid: ^3.0.5
   firebase_storage: ^10.2.3
   cloud_firestore: ^3.1.4
-  firebase_auth: ^3.3.3
+  firebase_auth:
   meta: ^1.3.0
-  firebase_core: ^1.10.5
+  firebase_core:
   google_maps_flutter:
+  geolocator:
+  location:
 
 
 

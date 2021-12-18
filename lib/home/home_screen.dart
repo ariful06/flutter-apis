@@ -25,6 +25,13 @@ class FlutterApiListScreen extends GetView {
             ),
             ListTile(
               leading: FlutterLogo(),
+              title: CustomItem(title: "Google Map"),
+              onTap: () => {Get.toNamed(AppRoutes.GOOGLE_MAP,arguments: [
+                {"title" : 'Google Map'}
+              ])},
+            ),
+            ListTile(
+              leading: FlutterLogo(),
               title: CustomItem(title: "animation_do"),
               onTap: () => {Get.toNamed(AppRoutes.ANIMATION_DO,arguments: [
                {"title" : 'Animated Do Example'}

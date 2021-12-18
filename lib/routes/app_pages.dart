@@ -16,6 +16,7 @@ import 'package:flutter_api_learning/home/chat/chat_page.dart';
 import 'package:flutter_api_learning/home/chat/login/bindings/login_bindings.dart';
 import 'package:flutter_api_learning/home/chat/login/login_page.dart';
 import 'package:flutter_api_learning/home/home_screen.dart';
+import 'package:flutter_api_learning/home/map/ui/map_screen.dart';
 import 'package:flutter_api_learning/home/smootstart/smooth_star_example.dart';
 import 'package:flutter_api_learning/home/timesago/times_ago_example.dart';
 import 'package:flutter_api_learning/home/toast/toast_example.dart';
@@ -34,6 +35,7 @@ class AppPages{
     GetPage<ChartPage>(name: AppRoutes.FL_CHART, page: ()=> ChartPage(),transition: Transition.fadeIn,binding: ChartBindings()),
     GetPage<TimesAgoExample>(name: AppRoutes.TIME_AGO, page: ()=> TimesAgoExample(),transition: Transition.fadeIn,),
     GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,binding: SmoothStarBindings()),
-    GetPage<ChatPage>(name: AppRoutes.CHAT_PAGE, page: ()=> ChatPage(),transition: Transition.fadeIn,binding: ChatBindings())
+    GetPage<ChatPage>(name: AppRoutes.CHAT_PAGE, page: ()=> ChatPage(),transition: Transition.fadeIn,binding: ChatBindings()),
+    GetPage<GoogleMapScreen>(name: AppRoutes.GOOGLE_MAP, page: ()=> GoogleMapScreen(),transition: Transition.fadeIn)
   ];
 }
