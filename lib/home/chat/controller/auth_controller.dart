@@ -59,23 +59,6 @@ class AuthController extends SuperController {
     }
   }
 
-  // Future<void> register(String email, String password) async {
-  //   try {
-  //     auth.createUserWithEmailAndPassword(email: email, password: password);
-  //     await FirebaseChatCore.instance.createUserInFirestore(
-  //       types.User(
-  //         firstName: 'Ariful',
-  //         id: auth.currentUser!.uid, // UID from Firebase Authentication
-  //         imageUrl: 'https://i.pravatar.cc/300',
-  //         lastName: 'Haque',
-  //       ),
-  //     );
-  //   } on FirebaseAuthException catch (e) {
-  //     print(e.message);
-  //   } catch (e) {
-  //     print(e.toString());
-  //   }
-  // }
 
   Future<void> login(String? email, String? password) async {
     try {
