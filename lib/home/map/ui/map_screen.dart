@@ -6,30 +6,42 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class GoogleMapScreen extends GetView<MapController>{
   const GoogleMapScreen({Key? key}) : super(key: key);
-
+  final LatLng _center = const LatLng(45.521563, -122.677433);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children:[
-          TextFormField(
-            decoration: InputDecoration(
-              hintText: "Search Here",
-              icon: IconButton(
-                onPressed:(){}, icon: const Icon(Icons.search) ,
-              )
-            ),
-            controller: controller.searchController,
-          ),
-          if (controller.currentPosition == null) const CircularProgressIndicator() else GoogleMap(
-          initialCameraPosition: CameraPosition(target: LatLng(controller.currentPosition!.value!.latitude,controller.currentPosition!.value!.longitude)),
-          mapType: MapType.normal,
-          onMapCreated: controller.onMapCreated,
-          myLocationEnabled: true,
-          myLocationButtonEnabled: true,
-        )
-        ]
+      appBar: AppBar(
+        title: Text("Map"),
       ),
+      body: Obx(() =>Column(
+          children:[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                onChanged: (value){
+                  controller.getAutoCompletePlaces(value);
+                },
+                decoration: InputDecoration(
+                    hintText: "Search Here",
+                    suffixIcon: IconButton(
+                      onPressed:(){}, icon: const Icon(Icons.search) ,
+                    )
+                ),
+                controller: controller.searchController,
+              ),
+            ),
+            controller.currentPosition.value == null? const CircularProgressIndicator() :Expanded(
+              child: GoogleMap(
+                initialCameraPosition: CameraPosition(target: _center),
+                mapType: MapType.normal,
+                myLocationEnabled: true,
+                myLocationButtonEnabled: true,
+                onMapCreated: controller.onMapCreated,
+              ),
+            )
+          ]
+      ), )
+
     );
   }
 }
