@@ -32,6 +32,13 @@ class FlutterApiListScreen extends GetView {
             ),
             ListTile(
               leading: FlutterLogo(),
+              title: CustomItem(title: "Comments"),
+              onTap: () => {Get.toNamed(AppRoutes.commentPage,arguments: [
+                {"title" : 'Comment page'}
+              ])},
+            ),
+            ListTile(
+              leading: FlutterLogo(),
               title: CustomItem(title: "animation_do"),
               onTap: () => {Get.toNamed(AppRoutes.ANIMATION_DO,arguments: [
                {"title" : 'Animated Do Example'}

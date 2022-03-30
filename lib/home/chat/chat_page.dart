@@ -196,7 +196,8 @@ class ChatPage extends GetView<ChatController> {
             initialData: const [],
             stream: FirebaseChatCore.instance.messages(snapshot.data!),
             builder: (context, snapshot) {
-              return Container(
+              return
+                Container(
                 color: kChatPageBg,
                 child: Column(
                   children: [

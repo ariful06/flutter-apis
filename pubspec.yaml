@@ -91,6 +91,7 @@ dependencies:
   geolocator:
   location:
   flutter_google_places:
+  comment_tree:
 
 
 

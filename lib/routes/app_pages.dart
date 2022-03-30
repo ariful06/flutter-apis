@@ -24,6 +24,9 @@ import 'package:flutter_api_learning/home/toast/toast_example.dart';
 import 'package:flutter_api_learning/routes/app_routes.dart';
 import 'package:get/get.dart';
 
+import '../home/comment/comment_bindings.dart';
+import '../home/comment/comment_tree.dart';
+
 class AppPages{
   static final List<GetPage<dynamic>> routes = <GetPage<dynamic>>[
     GetPage<FlutterApiListScreen>(name: AppRoutes.START, page: ()=> const FlutterApiListScreen()),
@@ -37,6 +40,7 @@ class AppPages{
     GetPage<TimesAgoExample>(name: AppRoutes.TIME_AGO, page: ()=> TimesAgoExample(),transition: Transition.fadeIn,),
     GetPage<SmoothStarExample>(name: AppRoutes.SMOOTH_STAR, page: ()=> SmoothStarExample(),transition: Transition.fadeIn,binding: SmoothStarBindings()),
     GetPage<ChatPage>(name: AppRoutes.CHAT_PAGE, page: ()=> ChatPage(),transition: Transition.fadeIn,binding: ChatBindings()),
-    GetPage<GoogleMapScreen>(name: AppRoutes.GOOGLE_MAP, page: ()=> GoogleMapScreen(),transition: Transition.fadeIn,binding: MapBindings())
+    GetPage<GoogleMapScreen>(name: AppRoutes.GOOGLE_MAP, page: ()=> GoogleMapScreen(),transition: Transition.fadeIn,binding: MapBindings()),
+    GetPage<CommentsPage>(name: AppRoutes.commentPage, page: ()=> CommentsPage(),transition: Transition.fadeIn,binding: CommentsBinding())
   ];
 }

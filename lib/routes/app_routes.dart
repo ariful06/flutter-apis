@@ -12,5 +12,6 @@ class AppRoutes{
   static const String SMOOTH_STAR = '/smooth_star';
   static const String CHAT_PAGE = '/chat';
   static const String GOOGLE_MAP = '/google_map_page';
+  static const String commentPage = '/comment_page';
 
 }
